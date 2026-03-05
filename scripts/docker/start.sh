@@ -19,4 +19,8 @@ echo "🚀 Subindo container na porta 8000..."
 docker run -d -p 8000:8000 --name $CONTAINER_NAME $IMAGE_NAME
 
 echo "--- ✅ API Pronta! ---"
-echo "Acompanhe o carregamento do BERT com: docker logs -f $CONTAINER_NAME"
+echo "Monitorando logs (Pressione Ctrl+C para sair do log, o container continuará rodando):"
+echo "---------------------------------------------------------------------------------"
+
+# Abre os logs automaticamente e foca neles
+docker logs -f $CONTAINER_NAME
